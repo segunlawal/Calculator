@@ -15,14 +15,12 @@ function divide(a,b){
 }
 function exponent(a,b){
     var exp=1;
+    if(b==0){return 1;}
+    else{
     for(i=0; i<=b; ++i){
         exp*=a;
     }
-    return exp;
-}
-function sqrt(a){
-    var squareroot = Math.sqrt(a);
-    return squareroot;
+    return exp;}
 }
 
 function operate(operator, a, b){
@@ -37,7 +35,7 @@ function operate(operator, a, b){
 
 var screen = document.querySelector('.screen')
 function display(a){
-    screen.textContent +=a; 
+    screen.textContent +=a;
 }
 function clearScreen(){
     screen.textContent = '';
@@ -49,25 +47,23 @@ function deleteOne(){
     var y = x.pop();    
     z = x.join('');
     screen.textContent = z;
+    topscreen.textContent = '';
 }
 
 var topscreen = document.querySelector('.top-screen');
 var t;
+var w;
 var operator;
 function getFirstInput(a){
     t = screen.textContent;
-    var operator = a;
-    clearScreen();
-    return t;
+    operator = a;
+    screen.textContent = '';
+    topscreen.textContent = t + operator;
 }
-//   topscreen.textContent = (screen.textContent) + a;
-
-// var getFirstInput = getFirstInput();
-// var t = getFirstInput[0];
-// var operator = getFirstInput[1];
 function isEqualTo(){
     w = screen.textContent;
-    // console.log(w);
-    // console.log(t);
-    // console.log(operator);
+    var ans = operate(operator, parseInt(t), parseInt(w));
+    topscreen.textContent = t + operator + w  + '=';
+    screen.textContent = ans;
 }
+

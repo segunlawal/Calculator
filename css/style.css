@@ -19,7 +19,5 @@
 }
 .top-screen{
     width: 40vw;
-    height:10vw;
-    position: absolute;
-    visibility: hidden;
+    height:3vw;
 }
