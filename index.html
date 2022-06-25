@@ -14,34 +14,33 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div class="calculator m-5 d-block align-items-center justify-content-center">
-        <div class="top-screen bg-info fs-5 d-flex align-items-end justify-content-end"></div>
-        <div class="screen bg-info fs-3 d-flex align-items-end justify-content-end"></div>
-        <div class="row-2 d-flex">
+    <div class="calculator m-auto card bg-info">
+        <input type="text" class ="screen fs-3 p-3 w-100 bg-dark border-0 text-white" value="" disabled>
+        <!-- <div class="top-screen bg-info fs-5 d-flex align-items-end justify-content-end"></div>
+        <div class="screen bg-info fs-3 d-flex align-items-end justify-content-end"></div> -->
+        <div class="the-buttons">
             <button type = "button" class="btn btn-dark operator" onclick="clearScreen()">AC</button>
             <button type = "button" class="btn btn-dark operator" onclick="deleteOne()">DEL</button>
             <button type = "button" class="btn btn-dark operator" onclick="getFirstInput('^')">x<sup>1</sup></button>
             <button type = "button" class="btn btn-dark operator" onclick="getFirstInput('/')">/</button>
-        </div>
-        <div class="row-2 d-flex">
+        
+        
             <button type = "button" class="btn btn-dark" onclick="display(7)">7</button>
             <button type = "button" class="btn btn-dark" onclick="display(8)">8</button>
             <button type = "button" class="btn btn-dark" onclick="display(9)">9</button>
             <button type = "button" class="btn btn-dark operator" onclick="getFirstInput('*')"><i class="fa fa-times fs-5" aria-hidden="true"></i></button>
-        </div>
-        <div class="row-2 d-flex">
+        
+        
             <button type = "button" class="btn btn-dark" onclick="display(4)">4</button>
             <button type = "button" class="btn btn-dark" onclick="display(5)">5</button>
             <button type = "button" class="btn btn-dark" onclick="display(6)">6</button>
             <button type = "button" class="btn btn-dark operator" onclick="getFirstInput('-')">-</button>
-        </div>
-        <div class="row-2 d-flex">
+        
             <button type = "button" class="btn btn-dark" onclick="display(1)">1</button>
             <button type = "button" class="btn btn-dark" onclick="display(2)">2</button>
             <button type = "button" class="btn btn-dark" onclick="display(3)">3</button>
             <button type = "button" class="btn btn-dark operator" >+/-</button>
-        </div>
-        <div class="row-2 d-flex gap">
+        
             <button type = "button" class="btn btn-dark" onclick="display(0)">0</button>
             <button type = "button" class="btn btn-dark operator">.</button>
             <button type = "button" class="btn btn-dark operator" onclick="getFirstInput('+')">+</button>
