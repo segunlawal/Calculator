@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0% !important;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+.btn{
+    width:10vw;
+    height: 10vh;
+    font-size: 1.5rem !important;
+}
+.operator{
+    color: orange !important;
+}
+.screen{
+    width: 40vw;
+    height: 10vw;
+}
+.top-screen{
+    width: 40vw;
+    height:10vw;
+    position: absolute;
+    visibility: hidden;
+}
