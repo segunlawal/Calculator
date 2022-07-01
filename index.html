@@ -13,6 +13,9 @@
     <title>Calculator</title>
 </head>
 <body>
+    <header class="d-flex justify-content-center mt-5">
+        <h2 class="text-white">Calculator</h2>
+    </header>
     <div class="calculator m-auto card bg-info">
         <input type="text" class ="screen fs-3 p-3 w-100 bg-dark border-0 text-white" value="" disabled>
         <!-- <div class="top-screen bg-info fs-5 d-flex align-items-end justify-content-end"></div>
@@ -38,10 +41,10 @@
             <button type = "button" class="btn btn-dark" onclick="display(1)">1</button>
             <button type = "button" class="btn btn-dark" onclick="display(2)">2</button>
             <button type = "button" class="btn btn-dark" onclick="display(3)">3</button>
-            <button type = "button" class="btn btn-dark operator" >+/-</button>
+            <button type = "button" class="btn btn-dark operator">+/-</button>
         
             <button type = "button" class="btn btn-dark" onclick="display(0)">0</button>
-            <button type = "button" class="btn btn-dark operator">.</button>
+            <button type = "button" class="btn btn-dark operator" onclick="display('.')">.</button>
             <button type = "button" class="btn btn-dark operator" onclick="getFirstInput('+')">+</button>
             <button type = "button" class="btn btn-dark operator" onclick="isEqualTo()">=</button>
         </div>

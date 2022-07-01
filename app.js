@@ -35,35 +35,33 @@ function operate(operator, a, b){
 
 var screen = document.querySelector('.screen')
 function display(a){
-    screen.textContent +=a;
+    screen.value +=a;
 }
 function clearScreen(){
-    screen.textContent = '';
-    topscreen.textContent = '';
+    screen.value = '';
 }
 function deleteOne(){
-    var currentScreen = screen.textContent;
+    var currentScreen = screen.value;
     var x = String(currentScreen).split('');
     var y = x.pop();    
     z = x.join('');
-    screen.textContent = z;
-    topscreen.textContent = '';
+    screen.value = z;
 }
 
 var topscreen = document.querySelector('.top-screen');
-var t;
+var t=0;
 var w;
 var operator;
 function getFirstInput(a){
-    t = screen.textContent;
+    t = screen.value;
     operator = a;
-    screen.textContent = '';
-    topscreen.textContent = t + operator;
+    screen.value = '';
 }
 function isEqualTo(){
-    w = screen.textContent;
+    if(screen.value==''){screen.value=''}
+    else if(t==0){screen.value = screen.value}
+    else{
+    w = screen.value;
     var ans = operate(operator, parseInt(t), parseInt(w));
-    topscreen.textContent = t + operator + w  + '=';
-    screen.textContent = ans;
+    screen.value = ans;}
 }
-
